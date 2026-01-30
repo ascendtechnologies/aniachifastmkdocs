@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>HTML CSS Utils - fastapibase</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "HTML CSS Utils";
+        var mkdocs_page_input_path = "tools/html_css_utils.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Models</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML CSS Utils</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.tools.html_css_utils">html_css_utils</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils--use-path3-as-inline-svg">Use PATH3 as inline SVG</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils--include-google_style-in-section-of-html">Include GOOGLE_STYLE in section of HTML</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils.GOOGLE_STYLE">GOOGLE_STYLE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils.PATH3">PATH3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils.PURE_SIMPLE_STYLE">PURE_SIMPLE_STYLE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.html_css_utils.SIMPLE_STYLE">SIMPLE_STYLE</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tools & Utilities</li>
+      <li class="breadcrumb-item active">HTML CSS Utils</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="html-css-utils">HTML CSS Utils</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.tools.html_css_utils" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.tools.html_css_utils</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>SVG and CSS Templates for HTML Rendering</p>
+<p>This module provides a set of predefined constants for SVG and CSS templates
+used in HTML rendering. It includes templates for:</p>
+<ol>
+<li>Small SVG graphics (e.g., indicator circles).</li>
+<li>Google-like search result styling.</li>
+<li>Simple table-based styling with highlights.</li>
+</ol>
+<p>These constants are intended to be used across the application wherever
+HTML rendering with consistent styling is required.</p>
+
+
+<details class="constants" open>
+  <summary>Constants</summary>
+  <p>PATH3 (Final[str]): SVG markup with circle elements.
+GOOGLE_STYLE (Final[str]): CSS mimicking Google search result layout.
+SIMPLE_STYLE (Final[str]): CSS for table-based HTML results and highlights.</p>
+</details>
+
+<details class="usage-example" open>
+  <summary>Usage Example</summary>
+  <p>from templates import PATH3, GOOGLE_STYLE</p>
+<h3 id="aniachifast.tools.html_css_utils--use-path3-as-inline-svg">Use PATH3 as inline SVG</h3>
+<p>svg_html = f'<svg width="20" height="20">{PATH3}</svg>'</p>
+<h3 id="aniachifast.tools.html_css_utils--include-google_style-in-section-of-html">Include GOOGLE_STYLE in <head> section of HTML</h3>
+</details>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.html_css_utils.GOOGLE_STYLE" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">GOOGLE_STYLE</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">GOOGLE_STYLE</span><span class="p">:</span> <span class="n">Final</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;style&gt;</span><span class="se">\n</span><span class="s2">body {</span><span class="se">\n</span><span class="s2">    font-family: Arial, sans-serif;</span><span class="se">\n</span><span class="s2">    margin: 40px;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.result {</span><span class="se">\n</span><span class="s2">    display: flex;</span><span class="se">\n</span><span class="s2">    gap: 20px;</span><span class="se">\n</span><span class="s2">    align-items: flex-start;</span><span class="se">\n</span><span class="s2">    margin-bottom: 30px;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.favicon img {</span><span class="se">\n</span><span class="s2">    width: 88px;</span><span class="se">\n</span><span class="s2">    height: 148px;</span><span class="se">\n</span><span class="s2">    object-fit: cover;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .source {</span><span class="se">\n</span><span class="s2">    font-size: 0.95em;</span><span class="se">\n</span><span class="s2">    color: #555;</span><span class="se">\n</span><span class="s2">    font-weight: 100;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .source span {</span><span class="se">\n</span><span class="s2">    color: #555;</span><span class="se">\n</span><span class="s2">    font-weight: 900;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .url {</span><span class="se">\n</span><span class="s2">    color: #9cbeff;</span><span class="se">\n</span><span class="s2">    font-size: 0.9em;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .url span {</span><span class="se">\n</span><span class="s2">    color: 555;</span><span class="se">\n</span><span class="s2">    font-size: 0.9em;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .size {</span><span class="se">\n</span><span class="s2">    color: #9cbeff;</span><span class="se">\n</span><span class="s2">    font-size: 0.94em;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .size span {</span><span class="se">\n</span><span class="s2">    color: 555;</span><span class="se">\n</span><span class="s2">    font-size: 0.94em;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .title {</span><span class="se">\n</span><span class="s2">    color: #1a0dab;</span><span class="se">\n</span><span class="s2">    font-size: 1.2em;</span><span class="se">\n</span><span class="s2">    text-decoration: none;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.text .snippet {</span><span class="se">\n</span><span class="s2">    color: #4d5156;</span><span class="se">\n</span><span class="s2">    font-size: 0.95em;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.highlight {</span><span class="se">\n</span><span class="s2">    font-size: 0.95em;</span><span class="se">\n</span><span class="s2">    color: red;</span><span class="se">\n</span><span class="s2">    font-weight: 900;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">&lt;/style&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>CSS template mimicking Google's search result style.</p>
+<p>This constant is intended for styling HTML search results to resemble
+Google's layout, including text, snippets, highlights, and favicon display.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>GOOGLE_STYLE</code></b>
+                  (<code><span title="typing.Final">Final</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>The full CSS markup as a string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.html_css_utils.PATH3" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">PATH3</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">PATH3</span><span class="p">:</span> <span class="n">Final</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;&lt;circle cx=&quot;5&quot; cy=&quot;5&quot; r=&quot;2&quot; fill=&quot;black&quot;/&gt;&lt;circle cx=&quot;15&quot; cy=&quot;5&quot;</span><span class="se">\n</span><span class="s1">r=&quot;8&quot; fill=&quot;black&quot;/&gt;&lt;circle cx=&quot;5&quot; cy=&quot;15&quot; r=&quot;2&quot; fill=&quot;red&quot;/&gt;&lt;circle cx=&quot;15&quot;</span><span class="se">\n</span><span class="s1">cy=&quot;15&quot; r=&quot;8&quot; fill=&quot;black&quot;/&gt;&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>SVG template representing a set of circles with predefined coordinates and colors.</p>
+<p>This constant is intended for use in rendering small SVG graphics or indicators.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>PATH3</code></b>
+                  (<code><span title="typing.Final">Final</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>The raw SVG markup as a string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.html_css_utils.PURE_SIMPLE_STYLE" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">PURE_SIMPLE_STYLE</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">PURE_SIMPLE_STYLE</span><span class="p">:</span> <span class="n">Final</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">        &lt;style&gt;</span><span class="se">\n</span><span class="s2">            table {</span><span class="se">\n</span><span class="s2">                width: 80%;</span><span class="se">\n</span><span class="s2">                border-collapse: collapse;</span><span class="se">\n</span><span class="s2">                margin: 10px 0;</span><span class="se">\n</span><span class="s2">                font-size: 14px;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            table, th, td {</span><span class="se">\n</span><span class="s2">                border: 1px solid grey;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            th, td {</span><span class="se">\n</span><span class="s2">                padding: 2px;</span><span class="se">\n</span><span class="s2">                text-align: left;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            th {</span><span class="se">\n</span><span class="s2">                background-color: #f2f2f2;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            tr:nth-child(even) {</span><span class="se">\n</span><span class="s2">                background-color: #f9f9f9;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            hr {</span><span class="se">\n</span><span class="s2">                border: none;</span><span class="se">\n</span><span class="s2">                height: 1px;</span><span class="se">\n</span><span class="s2">                width: 80%;</span><span class="se">\n</span><span class="s2">                margin-left: 0;</span><span class="se">\n</span><span class="s2">                margin-bottom: 4px;</span><span class="se">\n</span><span class="s2">                background-color: grey;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">            .date-text {</span><span class="se">\n</span><span class="s2">                font-family: &#39;Courier New&#39;, Courier, monospace;</span><span class="se">\n</span><span class="s2">                font-size: 11px;</span><span class="se">\n</span><span class="s2">                color: grey;</span><span class="se">\n</span><span class="s2">            }</span><span class="se">\n</span><span class="s2">        &lt;/style&gt;</span><span class="se">\n</span><span class="s2">        &quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Pure simple CSS template for table-based results without highlights.</p>
+<p>This constant provides basic styling for HTML tables and dates</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.html_css_utils.SIMPLE_STYLE" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">SIMPLE_STYLE</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">SIMPLE_STYLE</span><span class="p">:</span> <span class="n">Final</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;style&gt;</span><span class="se">\n</span><span class="s2">table {</span><span class="se">\n</span><span class="s2">    width: 80%;</span><span class="se">\n</span><span class="s2">    border-collapse: collapse;</span><span class="se">\n</span><span class="s2">    margin: 10px 0;</span><span class="se">\n</span><span class="s2">    font-size: 14px;</span><span class="se">\n</span><span class="s2">    background-color: #e6f2ff;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">table, th, td {</span><span class="se">\n</span><span class="s2">    border: 1px solid grey;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">th, td {</span><span class="se">\n</span><span class="s2">    padding: 10px;</span><span class="se">\n</span><span class="s2">    text-align: justify;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">th {</span><span class="se">\n</span><span class="s2">    background-color: #f2f2f2;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">tr:nth-child(even) {</span><span class="se">\n</span><span class="s2">    background-color: #f9f9f9;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">hr {</span><span class="se">\n</span><span class="s2">    border: none;</span><span class="se">\n</span><span class="s2">    height: 1px;</span><span class="se">\n</span><span class="s2">    width: 80%;</span><span class="se">\n</span><span class="s2">    margin-left: 0;</span><span class="se">\n</span><span class="s2">    margin-right: auto;</span><span class="se">\n</span><span class="s2">    margin-bottom: 4px;</span><span class="se">\n</span><span class="s2">    background-color: grey;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.date-text {</span><span class="se">\n</span><span class="s2">    font-family: &#39;Courier New&#39;, Courier, monospace;</span><span class="se">\n</span><span class="s2">    font-size: 11px;</span><span class="se">\n</span><span class="s2">    display: inline-block;</span><span class="se">\n</span><span class="s2">    margin: 0;</span><span class="se">\n</span><span class="s2">    color: grey;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">img {</span><span class="se">\n</span><span class="s2">    padding: 0px;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">span {</span><span class="se">\n</span><span class="s2">    font-family: &#39;Courier New&#39;, Courier, monospace;</span><span class="se">\n</span><span class="s2">    font-size: 14px;</span><span class="se">\n</span><span class="s2">    color: gray;</span><span class="se">\n</span><span class="s2">    margin: 20px;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">.find-text {</span><span class="se">\n</span><span class="s2">    background-color: #fff700;</span><span class="se">\n</span><span class="s2">    color: black;</span><span class="se">\n</span><span class="s2">    display: inline-block;</span><span class="se">\n</span><span class="s2">    border-radius: 5px;</span><span class="se">\n</span><span class="s2">    border: 1px solid transparent;</span><span class="se">\n</span><span class="s2">    fill: #000000;</span><span class="se">\n</span><span class="s2">    border-image-slice: 33%;</span><span class="se">\n</span><span class="s2">    border-image-repeat: stretch;</span><span class="se">\n</span><span class="s2">    border-image: url(&#39;data:image/svg+xml;utf8,</span><span class="se">\n</span><span class="s2">    &lt;svg xmlns=</span><span class="se">\&quot;</span><span class="s2">http://www.w3.org/2000/svg</span><span class="se">\&quot;\n</span><span class="s2">    width=</span><span class="se">\&quot;</span><span class="s2">15</span><span class="se">\&quot;</span><span class="s2"> height=</span><span class="se">\&quot;</span><span class="s2">15</span><span class="se">\&quot;</span><span class="s2">&gt;&gt;ttt&lt;&lt;/svg&gt;&#39;);</span><span class="se">\n</span><span class="s2">    padding: 0px 0px 0px 0px;</span><span class="se">\n</span><span class="s2">}</span><span class="se">\n</span><span class="s2">&lt;/style&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Simple CSS template for table-based results and highlighting.</p>
+<p>This constant provides basic styling for HTML tables, text highlights,
+dates, and inline SVG indicators.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>SIMPLE_STYLE</code></b>
+                  (<code><span title="typing.Final">Final</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>The full CSS markup as a string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../html_utils/" class="btn btn-neutral float-left" title="HTML Utils"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../md_utils/" class="btn btn-neutral float-right" title="Markdown Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../html_utils/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../md_utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

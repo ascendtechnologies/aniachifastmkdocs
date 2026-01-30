@@ -1,0 +1,2547 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Admin Models - fastapibase</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Admin Models";
+        var mkdocs_page_input_path = "core/models/admin.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Models</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Admin Models</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.core.models.admin">admin</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.admin--administrative-pydantic-models">Administrative Pydantic Models</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.admin.AdminUserListResponse">AdminUserListResponse</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.admin.AdminUserResponse">AdminUserResponse</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.admin.AdminUserStatsResponse">AdminUserStatsResponse</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core</li>
+          <li class="breadcrumb-item">Models</li>
+      <li class="breadcrumb-item active">Admin Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="admin-models">Admin Models</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.core.models.admin" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.core.models.admin</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <h3 id="aniachifast.core.models.admin--administrative-pydantic-models">Administrative Pydantic Models</h3>
+<p>This module defines Pydantic models used for administrative operations,
+including comprehensive user information with sensitive data masking.</p>
+<p>These models are intended for administrative use only and should be
+protected by appropriate access controls.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.admin.AdminUserListResponse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AdminUserListResponse</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Model for paginated list of users in admin APIs.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>users</code></b>
+                  (<code><span title="list">list</span>[<a class="autorefs autorefs-internal" title="AdminUserResponse (aniachifast.core.models.admin.AdminUserResponse)" href="#aniachifast.core.models.admin.AdminUserResponse">AdminUserResponse</a>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>List of user records.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>total_count</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Total number of users in database.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>page</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Current page number (1-based).</p>
+              </div>
+            </li>
+            <li>
+              <b><code>page_size</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of users per page.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>total_pages</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Total number of pages.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>has_next</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether there are more pages.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>has_previous</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether there are previous pages.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.has_next" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">has_next</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">has_next</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether there are more pages&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.has_previous" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">has_previous</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">has_previous</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether there are previous pages&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.page" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">page</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">page</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current page number (1-based)&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.page_size" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">page_size</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">page_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of users per page&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.total_count" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">total_count</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total number of users in database&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.total_pages" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">total_pages</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_pages</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total number of pages&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserListResponse.users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">users</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">AdminUserResponse</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;List of user records&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.admin.AdminUserResponse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AdminUserResponse</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="UserResponse (aniachifast.core.models.auth.UserResponse)" href="../auth/#aniachifast.core.models.auth.UserResponse">UserResponse</a></code></p>
+
+
+
+        <p>Extended model for returning complete user information in admin APIs.</p>
+<p>This model extends UserResponse with additional administrative fields
+including sensitive data that is automatically masked for security.</p>
+<p>Sensitive fields (creditcard, ssn) are automatically masked using
+field validators to ensure data protection even in admin contexts.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>#</code></b>
+                  (<code>Inherited from UserResponse</code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+            <li>
+              <b><code>id</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>User's unique identifier.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>uuid</code></b>
+                  (<code><span title="uuid.UUID">UUID</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>User's universally unique identifier.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>User's email address.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>username</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>User's username.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_active</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user account is active.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_verified</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user account is verified.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_admin</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user has admin privileges.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_staff</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user is staff.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_disabled</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user account is disabled.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_superuser</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user is a superuser.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>created_at</code></b>
+                  (<code><span title="datetime.datetime">datetime</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>When the user was created.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>last_update</code></b>
+                  (<code><span title="datetime.datetime">datetime</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>When the user was last updated.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>#</code></b>
+                  (<code>Additional admin fields</code>)
+              –
+              <div class="doc-md-description">
+                
+              </div>
+            </li>
+            <li>
+              <b><code>name</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's full name.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>max_tokens</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Maximum number of active tokens allowed.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>max_requests_per_token</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Maximum requests per token.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>is_blocked</code></b>
+                  (<code><span title="bool">bool</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Whether the user account is blocked.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>login_attempts</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of failed login attempts.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>blocked_time</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>When the account was blocked.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>login_attempt_time</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Last failed login attempt time.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>activation_code</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Account activation code.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>activation_code_expires_at</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Activation code expiration.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>activated_at</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>When the account was activated.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>reset_code</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Password reset code.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>reset_code_expires_at</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Reset code expiration.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>birthdate</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.date">date</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's birth date.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>gender</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's gender.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>country</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's country.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>postalcode</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's postal code.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>phone</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's phone number.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>extension</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>User's phone extension.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>creditcard</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Masked credit card number.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>ssn</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Masked social security number.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>last_login</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Last successful login time.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.activated_at" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">activated_at</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">activated_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;When the account was activated&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.activation_code" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">activation_code</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">activation_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Account activation code&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.activation_code_expires_at" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">activation_code_expires_at</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">activation_code_expires_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Activation code expiration&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.birthdate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">birthdate</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">birthdate</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">date</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s birth date&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.blocked_time" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">blocked_time</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocked_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;When the account was blocked&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.company_uuid" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">company_uuid</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">company_uuid</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">UUID</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Company id&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.country" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">country</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">country</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s country&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.creditcard" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">creditcard</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">creditcard</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Masked credit card number&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.extension" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">extension</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">extension</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s phone extension&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.gender" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">gender</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">gender</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s gender&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.is_blocked" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">is_blocked</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">is_blocked</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">False</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether the user account is blocked&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.last_login" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">last_login</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">last_login</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Last successful login time&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.login_attempt_time" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">login_attempt_time</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">login_attempt_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Last failed login attempt time&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.login_attempts" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">login_attempts</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">login_attempts</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of failed login attempts&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.max_requests_per_token" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">max_requests_per_token</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">max_requests_per_token</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="mi">1000</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Maximum requests per token&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.max_tokens" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">max_tokens</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">max_tokens</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="mi">5</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Maximum number of active tokens allowed&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.model_config" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">model_config</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">model_config</span> <span class="o">=</span> <span class="n">ConfigDict</span><span class="p">(</span>
+    <span class="n">from_attributes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">str_strip_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">validate_assignment</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.name" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s full name&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.phone" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">phone</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">phone</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s phone number&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.postalcode" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">postalcode</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">postalcode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;User&#39;s postal code&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.reset_code" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">reset_code</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">reset_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Password reset code&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.reset_code_expires_at" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">reset_code_expires_at</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">reset_code_expires_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Reset code expiration&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.ssn" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ssn</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ssn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Masked social security number&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.mask_creditcard" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">mask_creditcard</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">mask_creditcard</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Automatically mask credit card numbers for security.</p>
+<p>Shows only the last 4 digits in format: <strong><em>*-</em></strong><em>-</em>***-1234</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>v</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw credit card number from database</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Masked credit card string or None if no card</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.mask_ssn" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">mask_ssn</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">mask_ssn</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Automatically mask social security numbers for security.</p>
+<p>Shows only the last 4 digits in format: <strong>*-</strong>-1234</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>v</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw SSN from database</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Masked SSN string or None if no SSN</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.serialize_date" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">serialize_date</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">serialize_date</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">date</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize date fields to ISO format strings.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>value</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.date">date</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Date object from database</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>ISO format string or None if no date</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.serialize_datetime" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">serialize_datetime</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">serialize_datetime</span><span class="p">(</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize datetime fields to ISO format strings.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>value</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="datetime.datetime">datetime</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Datetime object from database</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>ISO format string or None if no datetime</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserResponse.serialize_uuid" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">serialize_uuid</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">serialize_uuid</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Serialize UUID to string for JSON output.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>value</code></b>
+                  (<code><span title="uuid.UUID">UUID</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>UUID object from database</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="str">str</span></code>
+              –
+              <div class="doc-md-description">
+                <p>String representation of UUID</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.admin.AdminUserStatsResponse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AdminUserStatsResponse</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Model for user statistics in admin APIs.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>total_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Total number of registered users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>active_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of active users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>verified_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of verified users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>blocked_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of blocked users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>disabled_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of disabled users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>admin_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of admin users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>staff_users</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of staff users.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>superusers</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of superusers.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>users_created_today</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of users created today.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>users_created_this_week</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of users created this week.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>users_created_this_month</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Number of users created this month.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.active_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">active_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">active_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of active users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.admin_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">admin_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">admin_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of admin users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.blocked_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">blocked_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">blocked_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of blocked users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.disabled_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">disabled_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">disabled_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of disabled users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.staff_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">staff_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">staff_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of staff users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.superusers" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">superusers</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">superusers</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Number of superusers&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.total_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">total_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total number of registered users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.users_created_this_month" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">users_created_this_month</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">users_created_this_month</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of users created this month&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.users_created_this_week" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">users_created_this_week</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">users_created_this_week</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of users created this week&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.users_created_today" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">users_created_today</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">users_created_today</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of users created today&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.admin.AdminUserStatsResponse.verified_users" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">verified_users</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">verified_users</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of verified users&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../auth/" class="btn btn-neutral float-left" title="Auth Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../database/" class="btn btn-neutral float-right" title="Database Models">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../auth/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../database/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>Api Envelope V1 - fastapibase</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Api Envelope V1";
+        var mkdocs_page_input_path = "core/http/responses/api_envelope_v1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Models</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../models/roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../../databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Http</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" >Responses</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Api Envelope V1</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.http.responses.api_envelope_v1">api_envelope_v1</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../tools/images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../tools/role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core</li>
+          <li class="breadcrumb-item">Http</li>
+          <li class="breadcrumb-item">Responses</li>
+      <li class="breadcrumb-item active">Api Envelope V1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="core-http-responses-api-envelope-v1">Core Http Responses Api Envelope V1</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.core.http.responses.api_envelope_v1" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.core.http.responses.api_envelope_v1</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>API response envelope implementation (Version 1).</p>
+<p>This module provides the V1 implementation of the API response envelope
+used to standardize HTTP responses across the platform.</p>
+<p>Key features:
+- Explicit API versioning
+- Request traceability via request IDs
+- Execution timing metrics
+- Deterministic payload hashing (SHA256)
+- Payload signing using HMAC-SHA256
+- Simple context metadata field ("ctx")</p>
+<p>Design principles:
+- Responses are immutable once built
+- Cryptographic integrity is guaranteed for the payload
+- Context metadata is NOT part of the signature
+- Compatible with FastAPI while remaining test-friendly
+- Inherits common functionality from BaseAPIResponse</p>
+
+
+<p><span class="doc-section-title">Classes:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code><a class="autorefs autorefs-internal" title="APIResponseV1 (aniachifast.core.http.responses.api_envelope_v1.APIResponseV1)" href="#aniachifast.core.http.responses.api_envelope_v1.APIResponseV1">APIResponseV1</a></code></td>
+            <td>
+              <div class="doc-md-description">
+                <p>Version 1 API response envelope implementation.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Basic usage::</p>
+<pre><code>from fastapi import Request
+from aniachifast.core.http.responses.api_envelope_v1 import APIResponseV1
+
+# In a FastAPI route handler
+@app.get("/api/v1/users")
+async def get_users(request: Request):
+    users_data = {"users": ["alice", "bob"]}
+
+    response = APIResponseV1.build(
+        data=users_data,
+        api_version="v1",
+        status=200,
+        request=request,
+        ctx={"source": "database", "cached": False}
+    )
+
+    return response.to_response()
+</code></pre>
+<p>Advanced usage with custom context::</p>
+<pre><code># Custom context for debugging
+debug_ctx = {
+    "debug_mode": True,
+    "query_count": 3,
+    "cache_hits": 2
+}
+
+response = APIResponseV1.build(
+    data={"result": "success"},
+    api_version="v1",
+    status=200,
+    request=request,
+    ctx=debug_ctx
+)
+</code></pre>
+</details>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.core.http.responses.api_envelope_v1.T" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">T</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">APIResponseV1</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="BaseAPIResponse (aniachifast.core.http.responses.api_envelope_abc.BaseAPIResponse)" href="../api_envelope_abc/#aniachifast.core.http.responses.api_envelope_abc.BaseAPIResponse">BaseAPIResponse</a>[<a class="autorefs autorefs-internal" title="T
+
+
+  
+      module-attribute
+   (aniachifast.core.http.responses.api_envelope_v1.T)" href="#aniachifast.core.http.responses.api_envelope_v1.T">T</a>]</code>, <code><span title="typing.Generic">Generic</span>[<a class="autorefs autorefs-internal" title="T
+
+
+  
+      module-attribute
+   (aniachifast.core.http.responses.api_envelope_v1.T)" href="#aniachifast.core.http.responses.api_envelope_v1.T">T</a>]</code></p>
+
+
+
+        <p>API response envelope – Version 1.</p>
+<p>This version provides a standardized HTTP response structure with
+cryptographic integrity and request traceability.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Attributes:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>timestamp</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Epoch timestamp when the response was generated.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>request_id</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Unique request identifier for tracing.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>execution_time_ms</code></b>
+                  (<code><span title="float">float</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Request execution time in milliseconds.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>checksum</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>SHA256 checksum of the response payload.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>signature</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>HMAC-SHA256 signature of the checksum.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>data</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="T
+
+
+  
+      module-attribute
+   (aniachifast.core.http.responses.api_envelope_v1.T)" href="#aniachifast.core.http.responses.api_envelope_v1.T">T</a></code>)
+              –
+              <div class="doc-md-description">
+                <p>Response payload of generic type T.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>ctx</code></b>
+                  (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>] | None</code>)
+              –
+              <div class="doc-md-description">
+                <p>Optional context metadata (not signed).</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Creating a V1 response::</p>
+<pre><code>response = APIResponseV1.build(
+    data={"message": "Hello World"},
+    api_version="v1",
+    status=200,
+    request=request,
+    ctx={"user_id": "123"}
+)
+
+# Response structure:
+# {
+#     "api_version": "v1",
+#     "status": 200,
+#     "timestamp": 1640995200,
+#     "request_id": "req_abc123",
+#     "execution_time_ms": 12.345,
+#     "checksum": "sha256_hash...",
+#     "signature": "hmac_signature...",
+#     "data": {"message": "Hello World"},
+#     "ctx": {"user_id": "123"}
+# }
+</code></pre>
+</details>
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.checksum" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">checksum</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">checksum</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;SHA256 checksum of the response payload&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.ctx" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ctx</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Best-effort request metadata (NOT signed)&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.data" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">data</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">data</span><span class="p">:</span> <span class="n">T</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Response payload&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.execution_time_ms" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">execution_time_ms</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">execution_time_ms</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Request execution time in milliseconds&quot;</span><span class="p">,</span>
+    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="mf">12.45</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.request_id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">request_id</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Unique request identifier&quot;</span><span class="p">,</span>
+    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;req_8f3c1a2b&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.signature" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">signature</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">signature</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;HMAC-SHA256 signature of the checksum&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.timestamp" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timestamp</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timestamp</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Epoch timestamp when the response was generated&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.build" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">build</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-classmethod"><code>classmethod</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">build</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">data</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span>
+    <span class="n">api_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">ctx</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">APIResponseV1</span><span class="p">[</span><span class="n">T</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Build a signed APIResponseV1 envelope.</p>
+<p>This method creates a complete V1 response envelope with all
+required fields populated, including cryptographic signatures.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>data</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="T
+
+
+  
+      module-attribute
+   (aniachifast.core.http.responses.api_envelope_v1.T)" href="#aniachifast.core.http.responses.api_envelope_v1.T">T</a></code>)
+              –
+              <div class="doc-md-description">
+                <p>Response payload of any type.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>api_version</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>API version identifier (typically "v1").</p>
+              </div>
+            </li>
+            <li>
+              <b><code>status</code></b>
+                  (<code><span title="int">int</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>HTTP status code (e.g., 200, 404, 500).</p>
+              </div>
+            </li>
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="starlette.requests.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>FastAPI request object for context extraction.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>ctx</code></b>
+                  (<code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>] | None</code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Additional context metadata.
+This data is included in the response but NOT in the signature.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><a class="autorefs autorefs-internal" title="APIResponseV1 (aniachifast.core.http.responses.api_envelope_v1.APIResponseV1)" href="#aniachifast.core.http.responses.api_envelope_v1.APIResponseV1">APIResponseV1</a>[<a class="autorefs autorefs-internal" title="T
+
+
+  
+      module-attribute
+   (aniachifast.core.http.responses.api_envelope_v1.T)" href="#aniachifast.core.http.responses.api_envelope_v1.T">T</a>]</code>
+              –
+              <div class="doc-md-description">
+                <p>APIResponseV1[T]: Fully populated and signed response envelope.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Basic success response::</p>
+<pre><code>response = APIResponseV1.build(
+    data={"users": ["alice", "bob"]},
+    api_version="v1",
+    status=200,
+    request=request
+)
+</code></pre>
+<p>Error response with context::</p>
+<pre><code>response = APIResponseV1.build(
+    data={"error": "User not found"},
+    api_version="v1",
+    status=404,
+    request=request,
+    ctx={"attempted_user_id": "999"}
+)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.core.http.responses.api_envelope_v1.APIResponseV1.to_response" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">to_response</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">to_response</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">JSONResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Convert the envelope into a FastAPI JSONResponse.</p>
+<p>Creates a FastAPI-compatible JSON response with the appropriate
+status code and serialized envelope content.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>JSONResponse</code></b>(                  <code><span title="fastapi.responses.JSONResponse">JSONResponse</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>HTTP response ready for FastAPI to return.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="note" open>
+  <summary>Note</summary>
+  <p>The "ctx" field is excluded from the response content to
+maintain backward compatibility and reduce response size.</p>
+</details>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Converting to HTTP response::</p>
+<pre><code>response = APIResponseV1.build(
+    data={"message": "success"},
+    api_version="v1",
+    status=200,
+    request=request
+)
+
+http_response = response.to_response()
+# Returns JSONResponse with status_code=200 and JSON content
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../api_envelope_abc/" class="btn btn-neutral float-left" title="Api Envelope Abc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../api_envelope_v2/" class="btn btn-neutral float-right" title="Api Envelope V2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../api_envelope_abc/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../api_envelope_v2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

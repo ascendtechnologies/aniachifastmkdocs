@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Dependencies - fastapibase</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Dependencies";
+        var mkdocs_page_input_path = "tools/dependencies.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Models</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Dependencies</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-functions">Main functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#allowed_headers">allowed_headers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get_header_format">get_header_format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#validate_metadata">validate_metadata</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.tools.dependencies">dependencies</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.allowed_headers">allowed_headers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.get_header_format">get_header_format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.validate_metadata">validate_metadata</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tools & Utilities</li>
+      <li class="breadcrumb-item active">Dependencies</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dependencies-utilities">Dependencies utilities</h1>
+<p>FastAPI request validation dependencies and helpers.</p>
+<h2 id="main-functions">Main functions</h2>
+<h3 id="allowed_headers">allowed_headers</h3>
+<p>FastAPI dependency that validates allowed <code>Accept</code> header values.</p>
+<pre><code class="language-python">from aniachifast.tools.dependencies import allowed_headers
+from fastapi import Depends
+
+@app.get(&quot;/items&quot;, dependencies=[Depends(allowed_headers({&quot;application/json&quot;}))])
+async def get_items():
+    return {&quot;items&quot;: []}
+</code></pre>
+<h3 id="get_header_format">get_header_format</h3>
+<p>Optionally extracts a valid <code>Accept</code> header without raising exceptions.</p>
+<h3 id="validate_metadata">validate_metadata</h3>
+<p>Validates and sanitizes JSON metadata input.</p>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.tools.dependencies" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.tools.dependencies</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>FastAPI request validation dependencies and helpers.</p>
+<p>This module provides reusable validation utilities designed to be used
+primarily as FastAPI dependencies. Their main purpose is to validate
+HTTP request headers (such as <code>Accept</code>) and ensure that incoming
+requests comply with the formats supported by the application.</p>
+<p>Key concepts:
+- Header validation is performed using FastAPI dependency injection.
+- The <code>allowed_headers</code> family of functions works together with
+  predefined media type constants (e.g. MediaTypes, COMMON_TYPES).
+- These dependencies are commonly used to enforce content negotiation
+  rules before an endpoint handler is executed.</p>
+<p>Additionally, this module contains helper utilities that are not yet
+dependencies but are used to validate and sanitize metadata values
+received from the client.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.allowed_headers" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">allowed_headers</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">allowed_headers</span><span class="p">(</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that enforces allowed <code>Accept</code> header values.</p>
+<p>This dependency validates the incoming request <code>Accept</code> header
+against a predefined set of allowed media types. If none of the
+provided media types matches the request, an HTTP 406 (Not Acceptable)
+error is raised.</p>
+<p><strong>IMPORTANT</strong>: You MUST use the predefined header sets from
+<code>aniachifast.tools.request_types</code> (e.g., COMMON_TYPES, JSON_TYPES)
+rather than creating ad-hoc sets. This ensures consistency and
+maintains a single source of truth for allowed header combinations.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>A set of allowed media types. Use predefined
+sets from <code>request_types</code> module (COMMON_TYPES, SIMPLE_TYPES,
+JSON_TYPES, HTML_TYPES).</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], str]:
+A dependency function that returns the matched media type.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>406 Not Acceptable if no allowed media type is found.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p><strong>CORRECT</strong> - Using predefined sets from request_types:</p>
+<pre><code class="language-python">from fastapi import Depends, APIRouter
+from aniachifast.tools.dependencies import allowed_headers
+from aniachifast.tools.request_types import COMMON_TYPES, JSON_TYPES
+
+router = APIRouter()
+
+@router.get(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(COMMON_TYPES))]
+)
+async def list_items():
+    return {&quot;status&quot;: &quot;ok&quot;}
+
+@router.post(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(JSON_TYPES))]
+)
+async def create_item():
+    return {&quot;status&quot;: &quot;created&quot;}
+</code></pre>
+<p><strong>INCORRECT</strong> - Do NOT create ad-hoc sets:</p>
+<pre><code class="language-python"># ❌ WRONG - Don't do this
+from aniachifast.tools.media_utils import MediaTypes
+
+@router.get(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(
+        {MediaTypes.JSON, MediaTypes.HTML}))]
+)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.get_header_format" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_header_format</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_header_format</span><span class="p">(</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that optionally extracts a valid <code>Accept</code> header.</p>
+<p>Unlike <code>allowed_headers</code>, this dependency does not raise an exception
+if the request does not contain an accepted media type. Instead, it
+returns <code>None</code> when no intersection is found.</p>
+<p>This is useful for endpoints where content negotiation is optional
+or where a default format can be applied.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>A set of acceptable media types.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="typing.Optional">Optional</span>[<span title="str">str</span>]]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], Optional[str]]:
+A dependency function returning the matched media type
+or <code>None</code> if no match is found.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">@router.get(&quot;/optional-format&quot;)
+async def example(
+    fmt: str | None = Depends(get_header_format({MediaTypes.JSON}))
+):
+    return {&quot;format&quot;: fmt or &quot;default&quot;}
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.validate_metadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">validate_metadata</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate_metadata</span><span class="p">(</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">dict_convert</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>not necessary dependency because of pydantic models
+Validate and sanitize metadata input.</p>
+<p>This helper function validates that a metadata string:
+- Is valid JSON
+- Deserializes to a dictionary
+- Contains only valid string keys without spaces
+- Uses alphanumeric and underscore characters only</p>
+<p>This function is NOT a FastAPI dependency yet, but it is designed
+to be easily adapted into one in the future.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>metadata</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>JSON string representing metadata.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>dict_convert</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>True</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>If True, returns a dictionary when valid.
+If False, returns the original string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="tuple">tuple</span>[<span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="dict">dict</span>, <span title="str">str</span>]], <span title="bool">bool</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>tuple[Optional[Union[dict, str]], bool]:
+- The validated metadata (dict or original value)
+- A boolean indicating whether validation succeeded</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">data, ok = validate_metadata('{&quot;user_id&quot;: &quot;123&quot;}')
+if not ok:
+    raise ValueError(&quot;Invalid metadata&quot;)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dependencies_utils/" class="btn btn-neutral float-right" title="Dependencies Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../dependencies_utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

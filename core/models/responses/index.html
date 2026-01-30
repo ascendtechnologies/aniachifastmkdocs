@@ -1,0 +1,3332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Response Models - fastapibase</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Response Models";
+        var mkdocs_page_input_path = "core/models/responses.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Models</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Response Models</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.core.models.responses">responses</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.AsyncioTaskModel">AsyncioTaskModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.AsyncioTasksResponseModel">AsyncioTasksResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.DbResponseInfo">DbResponseInfo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.DbResponseSizeOutput">DbResponseSizeOutput</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.HealthResponseModel">HealthResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.HealthServerResponseModel">HealthServerResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.HealthUptimeModel">HealthUptimeModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.IPLocationResponse">IPLocationResponse</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.Profile">Profile</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.ProfilesResponse">ProfilesResponse</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.ResponseObjectsModel">ResponseObjectsModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.ServerEpochTimeResponseModel">ServerEpochTimeResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.ServerInfoResponseModel">ServerInfoResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.ServerTimeResponseModel">ServerTimeResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.SystemHealthResponseModel">SystemHealthResponseModel</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.core.models.responses.TaskLocationModel">TaskLocationModel</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../tools/images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../tools/role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core</li>
+          <li class="breadcrumb-item">Models</li>
+      <li class="breadcrumb-item active">Response Models</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="response-models">Response Models</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.core.models.responses" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.core.models.responses</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Response models for FastAPI endpoints.</p>
+<p>This module defines all Pydantic response models exposed by the API.
+The models are used as <code>response_model</code> definitions in FastAPI routes
+to enforce response validation and to generate accurate OpenAPI
+(Swagger) documentation.</p>
+<p>The responses covered by this module include:
+- Application and system health checks
+- Server and runtime diagnostics
+- Asyncio task inspection
+- Database metadata
+- User profile information
+- IP geolocation lookup results</p>
+<p>All models are designed for production use in commercial-grade APIs.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.AsyncioTaskModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AsyncioTaskModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Representation of an asyncio Task and its execution state.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.cancelled" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">cancelled</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cancelled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether the task was cancelled&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.coroutine" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">coroutine</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">coroutine</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Coroutine associated with the task&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.done" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">done</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">done</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether the task has completed execution&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.id" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">id</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Unique task identifier&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.location" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">location</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TaskLocationModel</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Execution location metadata, if available&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTaskModel.name" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Task name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.AsyncioTasksResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AsyncioTasksResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Asyncio task inspection response.</p>
+<p>Provides aggregated task counts and detailed task metadata.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTasksResponseModel.running" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">running</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">running</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of currently running tasks&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTasksResponseModel.tasks" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">tasks</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">tasks</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AsyncioTaskModel</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Detailed list of asyncio tasks&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.AsyncioTasksResponseModel.total" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">total</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total number of asyncio tasks&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.DbResponseInfo" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">DbResponseInfo</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Database metadata response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.database_name" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">database_name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">database_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Database name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.db_start_time" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">db_start_time</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">db_start_time</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Database server start time&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.db_user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">db_user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">db_user</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Database user&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.postgres_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">postgres_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">postgres_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;PostgreSQL server version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.server_ip" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">server_ip</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Database server IP address&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.server_port" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">server_port</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Database server port&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseInfo.timezone" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timezone</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timezone</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Database server timezone&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.DbResponseSizeOutput" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">DbResponseSizeOutput</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Database size response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseSizeOutput.database" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">database</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">database</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Database name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.DbResponseSizeOutput.size" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">size</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">size</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Database size&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.HealthResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">HealthResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Basic application health response.</p>
+<p>Used by lightweight health check endpoints to confirm that the
+service is running and responsive.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthResponseModel.status" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">status</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">CURRENT_HEALTH_STATUS</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthResponseModel.timestamp" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timestamp</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">EPOCH_TIME_DESC</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.HealthServerResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">HealthServerResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Detailed application health response including server metadata.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.epoch" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">epoch</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current server time expressed as Unix epoch seconds&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.pod" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">pod</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">pod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Pod, container, or instance identifier&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.status" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">status</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">CURRENT_HEALTH_STATUS</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.timestamp" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timestamp</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">EPOCH_TIME_DESC</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.tz" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">tz</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">tz</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Server timezone&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthServerResponseModel.uptime" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">uptime</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">uptime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">APPLICATION_UPTIME</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.HealthUptimeModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">HealthUptimeModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Application uptime response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.HealthUptimeModel.uptime" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">uptime</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">uptime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">APPLICATION_UPTIME</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.IPLocationResponse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">IPLocationResponse</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>IP geolocation lookup response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.IPLocationResponse.country" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">country</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">country</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Full country name associated with the IP address&quot;</span><span class="p">,</span>
+    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;United States&quot;</span><span class="p">,</span> <span class="s2">&quot;Mexico&quot;</span><span class="p">,</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.IPLocationResponse.country_code" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">country_code</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">country_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;ISO country code associated with the IP address&quot;</span><span class="p">,</span>
+    <span class="n">examples</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;US&quot;</span><span class="p">,</span> <span class="s2">&quot;MX&quot;</span><span class="p">,</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.IPLocationResponse.ip_address" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ip_address</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ip_address</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;IP address that was looked up&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.IPLocationResponse.is_localhost" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">is_localhost</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">is_localhost</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Indicates whether the IP address is localhost or loopback&quot;</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.IPLocationResponse.lookup_success" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">lookup_success</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">lookup_success</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Indicates whether the IP geolocation lookup succeeded&quot;</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.Profile" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">Profile</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>User profile representation.</p>
+<p>Used by profile-related endpoints to return identifying and
+contact information.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.birthdate" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">birthdate</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">birthdate</span><span class="p">:</span> <span class="n">date</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;User date of birth&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.country" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">country</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">country</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Country of residence&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.creditcard" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">creditcard</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">creditcard</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Masked credit card number&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.email" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">email</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;User email address&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.ipv4" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ipv4</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ipv4</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Associated IPv4 address&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.name" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">name</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Full name of the user&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.phone" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">phone</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">phone</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Contact phone number&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.postalcode" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">postalcode</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">postalcode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Postal or ZIP code&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.ssn" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ssn</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ssn</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Masked social security number&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.Profile.username" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">username</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Unique username&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.ProfilesResponse" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ProfilesResponse</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Response model containing a list of user profiles.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ProfilesResponse.profiles" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">profiles</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">profiles</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Profile</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;List of user profiles&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.ResponseObjectsModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ResponseObjectsModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Generic response model containing an object count and timestamp.</p>
+<p>Field aliases are used to expose human-readable keys in the API
+response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ResponseObjectsModel.current_time" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">current_time</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">current_time</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="o">...</span><span class="p">,</span>
+    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;current time&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current server timestamp&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ResponseObjectsModel.model_config" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">model_config</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">model_config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;json_schema_extra&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;by_alias&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Generic response containing an object count and timestamp&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ResponseObjectsModel.total_objects" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">total_objects</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">total_objects</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="o">...</span><span class="p">,</span>
+    <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;total objects&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Total number of objects returned or processed&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.ServerEpochTimeResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ServerEpochTimeResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Server epoch time response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerEpochTimeResponseModel.epoch" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">epoch</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current server time expressed as Unix epoch seconds&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.ServerInfoResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ServerInfoResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Comprehensive server and runtime diagnostics response.</p>
+<p>Provides detailed information about the runtime environment,
+operating system, process state, and resource utilization.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.architecture" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">architecture</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">architecture</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;System CPU architecture&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.cpu_frequency" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">cpu_frequency</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cpu_frequency</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;CPU frequency in MHz&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.cpus" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">cpus</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">cpus</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Number of available CPU cores&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.current_path" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">current_path</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">current_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current working directory of the application&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.epoch" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">epoch</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current server time expressed as Unix epoch seconds&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.executable" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">executable</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">executable</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Path to the Python executable&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.fastapi_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">fastapi_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">fastapi_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;FastAPI framework version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.free_memory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">free_memory</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">free_memory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Available system memory&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.hostname" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">hostname</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">hostname</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Hostname of the server&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.kernel_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">kernel_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">kernel_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Operating system kernel version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.memory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">memory</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">memory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Total system memory&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.native_compiler" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">native_compiler</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">native_compiler</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Compiler used to build Python&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.pid" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">pid</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">pid</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Process identifier (PID)&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.port" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">port</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">port</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Server listening port&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.process_memory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">process_memory</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">process_memory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Memory consumed by the application process&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.python_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">python_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">python_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Python runtime version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.script" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">script</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">script</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Command-line arguments used to start the process&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.server_time" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">server_time</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">server_time</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">EPOCH_TIME_DESC</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.starlette_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">starlette_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">starlette_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Starlette framework version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.system" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">system</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">system</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Operating system name&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.uptime" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">uptime</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">uptime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">APPLICATION_UPTIME</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">user</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;System user running the process&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerInfoResponseModel.uvicorn_version" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">uvicorn_version</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">uvicorn_version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Uvicorn ASGI server version&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.ServerTimeResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">ServerTimeResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Server time response.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.ServerTimeResponseModel.timestamp" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timestamp</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">EPOCH_TIME_DESC</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.SystemHealthResponseModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">SystemHealthResponseModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>System health response including memory availability metrics.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.epoch" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">epoch</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">epoch</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Current server time expressed as Unix epoch seconds&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.free" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">free</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">free</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Available system memory&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.pod" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">pod</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">pod</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Pod, container, or instance identifier&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.status" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">status</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">CURRENT_HEALTH_STATUS</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.timestamp" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">timestamp</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">EPOCH_TIME_DESC</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.tz" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">tz</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">tz</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Server timezone&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.SystemHealthResponseModel.uptime" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">uptime</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">uptime</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="n">APPLICATION_UPTIME</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.core.models.responses.TaskLocationModel" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">TaskLocationModel</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="pydantic.BaseModel">BaseModel</span></code></p>
+
+
+
+        <p>Execution location metadata for an asyncio task.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.TaskLocationModel.file" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">file</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">file</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Source file where the task is executing&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.TaskLocationModel.function" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">function</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">function</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Function name associated with the task&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h4 id="aniachifast.core.models.responses.TaskLocationModel.line" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">line</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+      <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">line</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Line number in the source file&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../requests/" class="btn btn-neutral float-left" title="Request Models"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../activity_types_helper/" class="btn btn-neutral float-right" title="Activity Types Helper">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../requests/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../activity_types_helper/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

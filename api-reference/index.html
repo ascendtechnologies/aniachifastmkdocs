@@ -1,0 +1,3614 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>API Reference - fastapibase</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Reference";
+        var mkdocs_page_input_path = "api-reference.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Models</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/models/roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../core/databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../core/databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../core/databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../core/databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../core/databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../core/http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../core/ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../core/mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../core/queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../core/queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../core/storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/auth_response/">Auth Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../services/roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../tools/images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#authentication">Authentication</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#auth-interface">Auth Interface</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.auth.auth_interface">auth_interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.auth.auth_interface--authentication-interface-module">Authentication Interface Module</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.activate_user">activate_user</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.get_current_user">get_current_user</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.login">login</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.register">register</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.request_password_reset">request_password_reset</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.resend_activation_code">resend_activation_code</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_interface.AuthInterface.verify_token">verify_token</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#auth-factory">Auth Factory</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.auth.auth_factory">auth_factory</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.auth.auth_factory.settings">settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.auth.auth_factory.AuthFactory">AuthFactory</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.auth.auth_factory.AuthFactory.get_auth_service">get_auth_service</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tools-utilities">Tools &amp; Utilities</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.tools.dependencies">dependencies</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.VALID_KEY_REGEX">VALID_KEY_REGEX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.logger">logger</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.security">security</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.allowed_extension">allowed_extension</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.allowed_headers">allowed_headers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.get_accept_header">get_accept_header</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.get_header_format">get_header_format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.no_query_params">no_query_params</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.save_upload_file_dependency">save_upload_file_dependency</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.validate_and_parse_accept_header">validate_and_parse_accept_header</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.dependencies.validate_metadata">validate_metadata</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#string-utils">String Utils</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.tools.string_utils">string_utils</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.PATTERN">PATTERN</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.clean_filename">clean_filename</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.find_all_occurrences">find_all_occurrences</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.find_all_occurrences_as_dict">find_all_occurrences_as_dict</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.find_if_exists_any">find_if_exists_any</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.generate_random_string">generate_random_string</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.generate_random_string_url_safe">generate_random_string_url_safe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.get_cleaned_text">get_cleaned_text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.get_last_directory">get_last_directory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.get_single_ascii_art">get_single_ascii_art</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.mask_ip">mask_ip</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.normalize_str">normalize_str</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.normalize_text">normalize_text</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.normalized_metadata_as_str">normalized_metadata_as_str</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.tools.string_utils.normalized_metadata_as_str--parameters">Parameters</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.tools.string_utils.normalized_metadata_as_str--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.tools.string_utils.split_phone_extension">split_phone_extension</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="complete-api-reference">Complete API Reference</h1>
+<p>Complete API reference for all modules in Aniachifast.</p>
+<h2 id="authentication">Authentication</h2>
+<h3 id="auth-interface">Auth Interface</h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.auth.auth_interface" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.auth.auth_interface</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <h3 id="aniachifast.auth.auth_interface--authentication-interface-module">Authentication Interface Module</h3>
+<p>This module defines the <code>AuthInterface</code> abstract base class for user
+authentication systems. Any concrete implementation of this interface
+must provide methods for user registration, login, token validation,
+and retrieving the current authenticated user.</p>
+<p>The interface allows flexibility to implement multiple authentication
+backends (e.g., database, Cognito, etc.) while keeping the contract
+consistent.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.auth.auth_interface.AuthInterface" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AuthInterface</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABC">ABC</span></code></p>
+
+
+
+        <p>Abstract base class defining the interface for authentication
+operations.</p>
+<p>Implementations must provide async methods for user registration,
+login, retrieving the current user from a token, and verifying
+tokens.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.activate_user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">activate_user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">activate_user</span><span class="p">(</span><span class="n">activation_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Activate a user account using the activation code.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>activation_code</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The activation code sent to the user.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Activation result message.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If the activation code is invalid or expired.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.get_current_user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_current_user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_current_user</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Retrieve the currently authenticated user from a JWT token.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>token</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>JWT access token.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary with 'status' (str), 'message' (str),
+  and optionally 'user' (UserResponse) or 'code' (str).
+  Success case: {'status': 'success',
+                'message': 'Token validated successfully',
+                'user': UserResponse(...)}
+  Failure cases:
+  - Invalid token: {'status': 'error',
+                   'message': 'Could not validate credentials',
+                   'code': '401-001'}
+  - Missing claims: {'status': 'error',
+                    'message': 'Invalid token claims',
+                    'code': '401-002'}</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.login" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">login</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">login</span><span class="p">(</span><span class="n">credentials</span><span class="p">:</span> <span class="n">UserLogin</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Authenticate a user and return result with token or error.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>credentials</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="UserLogin (aniachifast.core.models.auth.UserLogin)" href="../core/models/auth/#aniachifast.core.models.auth.UserLogin">UserLogin</a></code>)
+              –
+              <div class="doc-md-description">
+                <p>Pydantic model containing the username/email
+                     and password.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary with 'status' (str), 'message' (str),
+  and optionally 'token' (Token), 'user_id' (UUID) and
+  'company_id' (UUID).
+  Success case: {'status': 'success',
+                'message': 'Login successful',
+                'token': Token(...),
+                'user_id': UUID(...),
+                'company_id': UUID(...)}
+  Failure case: {'status': 'error',
+                'message': 'Error description'}</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.register" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">register</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">register</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">UserCreate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Register a new user in the authentication system.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>user</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="UserCreate (aniachifast.core.models.auth.UserCreate)" href="../core/models/auth/#aniachifast.core.models.auth.UserCreate">UserCreate</a></code>)
+              –
+              <div class="doc-md-description">
+                <p>Pydantic model containing the user's registration data
+               (e.g., username, email, password, and other required fields
+               depending on the implementation).</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary with 'status' (str), 'message' (str),
+  and optionally 'user' (UserResponse).
+  Success case: {'status': 'success',
+                'message': 'User registered successfully',
+                'user': UserResponse(...)}
+  Failure case: {'status': 'error',
+                'message': 'Error description'}</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.request_password_reset" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">request_password_reset</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">request_password_reset</span><span class="p">(</span><span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a password reset code for a user.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The email address of the user requesting
+        a password reset.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary with 'status' (str), 'message' (str),
+  and optionally 'reset_code' (str), 'user_id' (UUID) and
+  'company_id' (UUID) fields if identifiable.
+  Success case: {'status': 'success',
+                'message': 'Reset code generated successfully',
+                'reset_code': 'abc123...',
+                'user_id': UUID(...),
+                'company_id': UUID(...)}
+  Failure case: {'status': 'error',
+                'message': 'Error description',
+                'user_id': UUID(...),
+                'company_id': UUID(...)}</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If there's a system error.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.resend_activation_code" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">resend_activation_code</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">resend_activation_code</span><span class="p">(</span><span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Resend or regenerate activation code for a user.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The email address of the user.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary with 'status' (str) and 'message' (str) fields,
+  and optionally 'user_id' (UUID) and 'company_id' (UUID) if identifiable.
+  Success case: {'status': 'success',
+                'message': 'Activation code sent successfully',
+                'user_id': UUID(...),
+                'company_id': UUID(...)}
+  Failure case: {'status': 'error',
+                'message': 'Error description',
+                'user_id': UUID(...),
+                'company_id': UUID(...)}</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If there's a system error.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_interface.AuthInterface.verify_token" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">verify_token</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">verify_token</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Verify if a given JWT token is valid.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>token</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>JWT access token to validate.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>bool</code></b>(                  <code><span title="bool">bool</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>True if the token is valid and not expired, False</p>
+              </div>
+            </li>
+            <li>
+                  <code><span title="bool">bool</span></code>
+              –
+              <div class="doc-md-description">
+                <p>otherwise.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="auth-factory">Auth Factory</h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.auth.auth_factory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.auth.auth_factory</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Authentication Service Factory.</p>
+<p>This module provides a factory responsible for instantiating and returning
+the appropriate authentication service implementation based on application
+configuration.</p>
+<p>Supported authentication backends:
+- Cognito (AWS Cognito)
+- Database-based authentication</p>
+<p>The selection is controlled via the <code>AUTH_PROVIDER</code> configuration setting.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.auth.auth_factory.settings" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">settings</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">get_settings</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="aniachifast.auth.auth_factory.AuthFactory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">AuthFactory</span>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+
+        <p>Factory class for authentication service resolution.</p>
+<p>This class encapsulates the logic required to select and instantiate
+the correct authentication provider according to the application's
+runtime configuration.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="aniachifast.auth.auth_factory.AuthFactory.get_auth_service" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_auth_service</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_auth_service</span><span class="p">(</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AuthInterface</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Resolve and return the configured authentication service.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>db</code></b>
+                  (<code><span title="sqlalchemy.orm.Session">Session</span> | None</code>, default:
+                      <code>None</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Database session. Required for
+                 database-based authentication
+                 when performing operations
+                 that need DB access (login, register, etc.).
+                 Can be None for stateless operations
+                 like JWT token validation.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>AuthInterface</code></b>(                  <code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>
+)              –
+              <div class="doc-md-description">
+                <p>Authentication service instance.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="ValueError">ValueError</span></code>
+              –
+              <div class="doc-md-description">
+                <p>If AUTH_PROVIDER is invalid or unsupported.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="notes" open>
+  <summary>Notes</summary>
+  <ul>
+<li>For Cognito provider: db parameter is ignored</li>
+<li>For Database provider: db can be None for stateless operations
+  (token validation), but required for DB operations (login, register)</li>
+</ul>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div><h2 id="tools-utilities">Tools &amp; Utilities</h2>
+<h3 id="dependencies">Dependencies</h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.tools.dependencies" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.tools.dependencies</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>FastAPI request validation dependencies and helpers.</p>
+<p>This module provides reusable validation utilities designed to be used
+primarily as FastAPI dependencies. Their main purpose is to validate
+HTTP request headers (such as <code>Accept</code>) and ensure that incoming
+requests comply with the formats supported by the application.</p>
+<p>Key concepts:
+- Header validation is performed using FastAPI dependency injection.
+- The <code>allowed_headers</code> family of functions works together with
+  predefined media type constants (e.g. MediaTypes, COMMON_TYPES).
+- These dependencies are commonly used to enforce content negotiation
+  rules before an endpoint handler is executed.</p>
+<p>Additionally, this module contains helper utilities that are not yet
+dependencies but are used to validate and sanitize metadata values
+received from the client.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.dependencies.VALID_KEY_REGEX" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">VALID_KEY_REGEX</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">VALID_KEY_REGEX</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="s1">&#39;^</span><span class="se">\\</span><span class="s1">w+$&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.dependencies.logger" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">logger</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">logger</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.dependencies.security" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">security</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">security</span> <span class="o">=</span> <span class="n">HTTPBearer</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.allowed_extension" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">allowed_extension</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">allowed_extension</span><span class="p">(</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that validates request format based on extensions.</p>
+<p>This dependency behaves similarly to <code>allowed_headers</code> but is designed
+to support scenarios where request format validation is tied to URL
+extensions or future asynchronous logic.</p>
+<p>Currently, it validates the <code>Accept</code> header and raises HTTP 406
+if no allowed format is found.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>A set of allowed media types.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], str]:
+A dependency function returning the matched media type.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>406 Not Acceptable if no allowed media type is found.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.allowed_headers" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">allowed_headers</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">allowed_headers</span><span class="p">(</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that enforces allowed <code>Accept</code> header values.</p>
+<p>This dependency validates the incoming request <code>Accept</code> header
+against a predefined set of allowed media types. If none of the
+provided media types matches the request, an HTTP 406 (Not Acceptable)
+error is raised.</p>
+<p><strong>IMPORTANT</strong>: You MUST use the predefined header sets from
+<code>aniachifast.tools.request_types</code> (e.g., COMMON_TYPES, JSON_TYPES)
+rather than creating ad-hoc sets. This ensures consistency and
+maintains a single source of truth for allowed header combinations.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>A set of allowed media types. Use predefined
+sets from <code>request_types</code> module (COMMON_TYPES, SIMPLE_TYPES,
+JSON_TYPES, HTML_TYPES).</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], str]:
+A dependency function that returns the matched media type.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>406 Not Acceptable if no allowed media type is found.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p><strong>CORRECT</strong> - Using predefined sets from request_types:</p>
+<pre><code class="language-python">from fastapi import Depends, APIRouter
+from aniachifast.tools.dependencies import allowed_headers
+from aniachifast.tools.request_types import COMMON_TYPES, JSON_TYPES
+
+router = APIRouter()
+
+@router.get(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(COMMON_TYPES))]
+)
+async def list_items():
+    return {&quot;status&quot;: &quot;ok&quot;}
+
+@router.post(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(JSON_TYPES))]
+)
+async def create_item():
+    return {&quot;status&quot;: &quot;created&quot;}
+</code></pre>
+<p><strong>INCORRECT</strong> - Do NOT create ad-hoc sets:</p>
+<pre><code class="language-python"># ❌ WRONG - Don't do this
+from aniachifast.tools.media_utils import MediaTypes
+
+@router.get(
+    &quot;/items&quot;,
+    dependencies=[Depends(allowed_headers(
+        {MediaTypes.JSON, MediaTypes.HTML}))]
+)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.get_accept_header" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_accept_header</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_accept_header</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that extracts the Accept header from the request.</p>
+<p>This is a simple dependency that returns the Accept header value
+or None if not present. Useful for content negotiation in endpoints.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The incoming FastAPI request.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Optional[str]: The Accept header value or None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">@router.get(&quot;/endpoint&quot;)
+async def example(
+    accept: str | None = Depends(get_accept_header)
+):
+    return {&quot;accept&quot;: accept or &quot;not specified&quot;}
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.get_header_format" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_header_format</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_header_format</span><span class="p">(</span>
+    <span class="n">headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency that optionally extracts a valid <code>Accept</code> header.</p>
+<p>Unlike <code>allowed_headers</code>, this dependency does not raise an exception
+if the request does not contain an accepted media type. Instead, it
+returns <code>None</code> when no intersection is found.</p>
+<p>This is useful for endpoints where content negotiation is optional
+or where a default format can be applied.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>A set of acceptable media types.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="typing.Optional">Optional</span>[<span title="str">str</span>]]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], Optional[str]]:
+A dependency function returning the matched media type
+or <code>None</code> if no match is found.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">@router.get(&quot;/optional-format&quot;)
+async def example(
+    fmt: str | None = Depends(get_header_format({MediaTypes.JSON}))
+):
+    return {&quot;format&quot;: fmt or &quot;default&quot;}
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.no_query_params" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">no_query_params</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">no_query_params</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Reject requests that include query parameters.</p>
+<p>This dependency enforces a strict API contract for endpoints
+that must not receive any query parameters.</p>
+<p>If any query parameters are present in the request URL,
+the request is rejected with HTTP 422 (Unprocessable Entity).</p>
+<p>Example (rejected):
+    GET /tables?foo=bar</p>
+<p>Example (allowed):
+    GET /tables</p>
+
+
+<details class="how-to-use" open>
+  <summary>How to use</summary>
+  <p>@router.get('/tables')
+async def tables(
+    _: bool = Depends(no_query_params)
+):</p>
+</details>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>The FastAPI request object.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>bool</code></b>(                  <code><span title="bool">bool</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Always True if validation passes.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>422 Unprocessable Entity if query parameters are provided.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.save_upload_file_dependency" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">save_upload_file_dependency</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">save_upload_file_dependency</span><span class="p">(</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">allowed_types</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">max_size_bytes</span><span class="p">:</span> <span class="nb">int</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.validate_and_parse_accept_header" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">validate_and_parse_accept_header</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate_and_parse_accept_header</span><span class="p">(</span>
+    <span class="n">accepted_headers</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">raise_exception</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">default_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;json&quot;</span><span class="p">,</span>
+    <span class="n">html_default_format</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Request</span><span class="p">],</span> <span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>FastAPI dependency factory that validates and parses Accept header.</p>
+<p>This dependency validates the Accept header against a set of supported
+media types and returns a format identifier. If the Accept header
+contains an unsupported media type, it can either raise a
+RequestValidationError (HTTP 422) or return a default format.</p>
+<p>This validation happens BEFORE the endpoint handler is executed,
+preventing unnecessary database queries for invalid requests.</p>
+<p>Media type to format mapping:
+- application/json -&gt; 'json'
+- text/html -&gt; 'html'
+- text/csv -&gt; 'csv'
+- text/tab-separated-values -&gt; 'tsv'
+- application/xml -&gt; 'xml'
+- text/yaml, application/yaml -&gt; 'yaml'
+- text/plain -&gt; 'txt'
+- <em>/</em> -&gt; default_format
+- None -&gt; default_format</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>accepted_headers</code></b>
+                  (<code><span title="collections.abc.Set">Set</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Set of allowed media types.
+Use predefined sets from request_types module
+(e.g., ALL_FORMATS_TYPES, COMMON_TYPES).</p>
+              </div>
+            </li>
+            <li>
+              <b><code>raise_exception</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>True</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>If True, raises RequestValidationError
+for unsupported formats. If False, returns default_format.
+Default: True.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>default_format</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code>&#39;json&#39;</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Format to return when Accept header is
+None, wildcard, or unsupported (if raise_exception=False).
+Default: 'json'.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="collections.abc.Callable">Callable</span>[[<span title="fastapi.Request">Request</span>], <span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Callable[[Request], str]: Dependency function that returns
+format identifier.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.exceptions.RequestValidationError">RequestValidationError</span></code>
+              –
+              <div class="doc-md-description">
+                <p>422 if Accept header contains unsupported media type
+and raise_exception=True.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">from aniachifast.tools.request_types import ALL_FORMATS_TYPES
+from aniachifast.tools.dependencies import validate_and_parse_accept_header
+
+# Create dependency
+PARSE_ACCEPT_DEPENDENCY = Depends(
+    validate_and_parse_accept_header(ALL_FORMATS_TYPES)
+)
+
+@router.get(&quot;/endpoint&quot;)
+async def example(
+    fmt: str = PARSE_ACCEPT_DEPENDENCY
+):
+    if fmt == 'json':
+        return JSONResponse(...)
+    elif fmt == 'html':
+        return HTMLResponse(...)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.dependencies.validate_metadata" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">validate_metadata</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate_metadata</span><span class="p">(</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">dict_convert</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span> <span class="nb">bool</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>not necessary dependency because of pydantic models
+Validate and sanitize metadata input.</p>
+<p>This helper function validates that a metadata string:
+- Is valid JSON
+- Deserializes to a dictionary
+- Contains only valid string keys without spaces
+- Uses alphanumeric and underscore characters only</p>
+<p>This function is NOT a FastAPI dependency yet, but it is designed
+to be easily adapted into one in the future.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>metadata</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>JSON string representing metadata.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>dict_convert</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>True</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>If True, returns a dictionary when valid.
+If False, returns the original string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="tuple">tuple</span>[<span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="dict">dict</span>, <span title="str">str</span>]], <span title="bool">bool</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>tuple[Optional[Union[dict, str]], bool]:
+- The validated metadata (dict or original value)
+- A boolean indicating whether validation succeeded</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <pre><code class="language-python">data, ok = validate_metadata('{&quot;user_id&quot;: &quot;123&quot;}')
+if not ok:
+    raise ValueError(&quot;Invalid metadata&quot;)
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div><h3 id="string-utils">String Utils</h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.tools.string_utils" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.tools.string_utils</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>String and text manipulation utilities.</p>
+<p>This module centralizes a collection of helper functions focused on
+string manipulation, normalization, searching, sanitization, and
+token generation.</p>
+<p>It is designed to be reusable across different layers of an application
+(e.g. API, services, utilities) and contains pure functions with no
+side effects, except where explicitly required (e.g. secure token
+generation).</p>
+<p>Common use cases include:
+- Phone number parsing
+- Path manipulation
+- Random and secure string generation
+- Unicode normalization and accent removal
+- Text searching and matching
+- Filename sanitization
+- Decorative ASCII output</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.tools.string_utils.PATTERN" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">PATTERN</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">PATTERN</span> <span class="o">=</span> <span class="s1">&#39;^([</span><span class="se">\\</span><span class="s1">d</span><span class="se">\\</span><span class="s1">+</span><span class="se">\\</span><span class="s1">-</span><span class="se">\\</span><span class="s1">.</span><span class="se">\\</span><span class="s1">s]+)[xX]?</span><span class="se">\\</span><span class="s1">s*(</span><span class="se">\\</span><span class="s1">d+)?$&#39;</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.clean_filename" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">clean_filename</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">clean_filename</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">preffix_uuid</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Sanitize a filename and optionally prefix it with a UUID.</p>
+<p>Replaces spaces and invalid characters to ensure filesystem safety.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>filename</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Original filename.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>preffix_uuid</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>True</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Whether to prefix the filename with a UUID.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Sanitized filename.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.find_all_occurrences" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">find_all_occurrences</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">find_all_occurrences</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Find all occurrences of a substring in a string.</p>
+<p>Optionally normalizes the source text before searching.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Text where the search is performed.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>words</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Substring to search for.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>normalize</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>False</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Whether to normalize the source text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="list">list</span>[<span title="tuple">tuple</span>[<span title="int">int</span>, <span title="int">int</span>]]</code>
+              –
+              <div class="doc-md-description">
+                <p>list[tuple[int, int]]: List of (start, end) index tuples.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.find_all_occurrences_as_dict" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">find_all_occurrences_as_dict</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">find_all_occurrences_as_dict</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Find all occurrences of a substring and return them as dictionaries.</p>
+<p>This function is a wrapper over <code>find_all_occurrences</code> that transforms
+index tuples into dictionaries.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Text where the search is performed.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>words</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Substring to search for.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>normalize</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>False</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Whether to normalize the source text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="list">list</span>[<span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>] | None]</code>
+              –
+              <div class="doc-md-description">
+                <p>list[dict[str, Any]]: List of dictionaries with start and end indices.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.find_if_exists_any" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">find_if_exists_any</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">find_if_exists_any</span><span class="p">(</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">words</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Check if any word exists in the source text.</p>
+<p>Splits the input words by whitespace and searches each token
+independently.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>source</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Text to search in.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>words</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Space-separated words to search for.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>normalize</code></b>
+                  (<code><span title="bool">bool</span></code>, default:
+                      <code>False</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Whether to normalize the source text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>bool</code></b>(                  <code><span title="bool">bool</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>True if any word is found, False otherwise.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.generate_random_string" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">generate_random_string</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">generate_random_string</span><span class="p">(</span><span class="n">length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a random alphanumeric string.</p>
+<p>Intended for non-cryptographic use cases such as identifiers,
+temporary values, or test data.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>length</code></b>
+                  (<code><span title="int">int</span></code>, default:
+                      <code>10</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Length of the generated string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Random alphanumeric string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.generate_random_string_url_safe" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">generate_random_string_url_safe</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">generate_random_string_url_safe</span><span class="p">(</span><span class="n">length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a cryptographically secure URL-safe token.</p>
+<p>Uses os.urandom and base64 encoding to produce a secure token suitable
+for authentication, reset links, or secrets.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>length</code></b>
+                  (<code><span title="int">int</span></code>, default:
+                      <code>100</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Number of random bytes to generate before encoding.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>URL-safe base64-encoded token.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.get_cleaned_text" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_cleaned_text</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_cleaned_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Clean text by normalizing and trimming whitespace.</p>
+<p>Removes accents and diacritical marks, returning a stripped string.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>text</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Input text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Cleaned and normalized text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.get_last_directory" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_last_directory</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_last_directory</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Return the last directory component of a filesystem path.</p>
+<p>Normalizes the path and extracts the final directory name.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>path</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Filesystem path.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Last directory prefixed with <code>/</code>, or <code>/</code> if empty.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.get_single_ascii_art" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_single_ascii_art</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_single_ascii_art</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">msg2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Generate a simple ASCII art block with optional footer text.</p>
+<p>Useful for decorative output, logs, or playful API responses.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>msg</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Primary message.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>msg2</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Optional secondary message.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>ASCII art string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.mask_ip" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">mask_ip</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">mask_ip</span><span class="p">(</span><span class="n">ip</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Mask an IP address (IPv4 or IPv6) to avoid exposing PII.</p>
+
+
+<details class="ipv4" open>
+  <summary>IPv4</summary>
+  <p>192.168.10.45 -&gt; 192.168.xxx.xxx</p>
+</details>
+
+<details class="ipv6" open>
+  <summary>IPv6</summary>
+  <p>2001:db8:85a3:0:0:8a2e:370:7334
+-&gt; 2001:db8:85a3:xxxx:xxxx:xxxx:xxxx:xxxx</p>
+</details>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>ip</code></b>
+                  (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>)
+              –
+              <div class="doc-md-description">
+                <p>Raw IP address as string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>Masked IP address or None if input is None or invalid.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.normalize_str" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">normalize_str</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">normalize_str</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Convert a value into a human-readable string representation.</p>
+<p>This function is primarily intended to normalize <code>bytes</code> values by
+decoding them into UTF-8 strings (with replacement for invalid
+sequences), preventing the default Python <code>b'...'</code> representation
+from leaking into user-facing messages.</p>
+<p>For all other types, <code>str(value)</code> is used.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>value</code></b>
+                  (<code><span title="object">object</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Any value to normalize.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>A human-readable string representation of the value.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span class="doc-section-title">Examples:</span></p>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">normalize_str</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">)</span>
+<span class="go">&#39;8.8.8.8&#39;</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">normalize_str</span><span class="p">(</span><span class="s2">&quot;8.8.8.8&quot;</span><span class="p">)</span>
+<span class="go">&#39;8.8.8.8&#39;</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">normalize_str</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="go">&#39;123&#39;</span>
+</code></pre></div>
+    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">normalize_str</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">&#39;None&#39;</span>
+</code></pre></div>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.normalize_text" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">normalize_text</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">normalize_text</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Normalize Unicode text by removing accents and diacritics.</p>
+<p>Converts accented characters into their ASCII equivalents.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>source</code></b>
+                  (<code><span title="str">str</span> | None</code>)
+              –
+              <div class="doc-md-description">
+                <p>Input text.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>str</code></b>(                  <code><span title="str">str</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Normalized text without diacritics.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.normalized_metadata_as_str" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">normalized_metadata_as_str</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">normalized_metadata_as_str</span><span class="p">(</span>
+    <span class="n">metadata</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Normalize metadata values to strings.</p>
+<p>This helper converts all metadata values to their string
+representation, ensuring compatibility with backends that
+require <code>dict[str, str]</code> metadata (e.g. MinIO/S3).</p>
+<h5 id="aniachifast.tools.string_utils.normalized_metadata_as_str--parameters">Parameters</h5>
+<p>metadata : dict[str, Any] | None
+    Arbitrary metadata dictionary.</p>
+<h5 id="aniachifast.tools.string_utils.normalized_metadata_as_str--returns">Returns</h5>
+<p>dict[str, str] | None
+    Metadata with all values converted to strings, or None
+    if the input was None.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.tools.string_utils.split_phone_extension" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">split_phone_extension</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">split_phone_extension</span><span class="p">(</span>
+    <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Split a phone number from its optional extension.</p>
+<p>Attempts to extract a phone extension if present. Supported formats
+include numbers followed by <code>x</code>, <code>X</code>, or whitespace-separated extensions.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>phone</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Phone number string.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="str">str</span></code>
+              –
+              <div class="doc-md-description">
+                <p>tuple[str, Optional[str]]: A tuple containing the base phone number</p>
+              </div>
+            </li>
+            <li>
+                  <code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>
+              –
+              <div class="doc-md-description">
+                <p>and the extension if found, otherwise None.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../api/ws/health/" class="btn btn-neutral float-left" title="Health WS"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../api/ws/health/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

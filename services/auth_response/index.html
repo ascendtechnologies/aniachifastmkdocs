@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Auth Responses - fastapibase</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Auth Responses";
+        var mkdocs_page_input_path = "services/auth_response.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> fastapibase
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../__about__/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../constants/">Constants</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/quickstart/">Quick Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-started/configuration/">Configuration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/config/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../core/limiter/">Limiter</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Models</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/auth/">Auth Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/admin/">Admin Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/database/">Database Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/requests/">Request Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/responses/">Response Models</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/activity_types_helper/">Activity Types Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/cloud_files/">Cloud Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/email/">Email</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/ledger/">Ledger</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/os_process/">Os Process</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/models/roles/">Roles</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cache</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cache/redis/">Redis Implementation</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Databases</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/overview/">Overview</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-connection/">RDS Connection</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/rds-helper/">RDS Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/databases/opensearch/">OpenSearch</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Rds</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" >Queries</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/base_impl/">Base Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_factory/">Db Factory</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/db_interface/">Db Interface</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/mysql_impl/">Mysql Impl</a>
+                </li>
+                <li class="toctree-l4"><a class="reference internal" href="../../core/databases/rds/queries/posgresql_impl/">Posgresql Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Async Helpers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/uploader_helper/">Uploader Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/email_helper/">Email Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/ledger_helper/">Ledger Helper</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/async_helpers/upload_helper/">Upload Helper</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >HTTP</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/errors/">Error Handling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/http/responses/">Response Envelopes</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Cloud Services</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/cloudsrv/helpers/">Helpers</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Concurrency</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/concurrency/executors/">Executors</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Http</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Responses</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_abc/">Api Envelope Abc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v1/">Api Envelope V1</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/api_envelope_v2/">Api Envelope V2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/http/responses/default_error_responses/">Default Error Responses</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ledgers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/dynamo_single_impl/">Dynamo Single Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/ledgers/backends/postgresql_single_impl/">Postgresql Single Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Mail</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/mail/backends/gmail_impl/">Gmail Impl</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Queues</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/email_q/">Email Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/ledger_q/">Ledger Q</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../core/queues/uploader_q/">Uploader Q</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Storage</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" >Backends</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/alicloud_impl/">Alicloud Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/aws_s3_impl/">Aws S3 Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/azure_impl/">Azure Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/digital_impl/">Digital Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/gcp_impl/">Gcp Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/local_fs_impl/">Local Fs Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/minio_impl/">Minio Impl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../core/storage/backends/protocols/">Protocols</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Authentication</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_interface/">Auth Interface</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_factory/">Auth Factory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/auth_dependency/">Auth Dependency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/cognito_auth/">Cognito Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/database_auth/">Database Auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../auth/role_dependencies/">Role Dependencies</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Admin Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/user_management/">User Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_dynamodb/">Ledger Management Dynamodb</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_management_psql/">Ledger Management Psql</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../admin_tools/ledger_protocol/">Ledger Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Middlewares</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/cors/">CORS Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/context/">Context Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/logging/">Logging Middleware</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../middlewares/prometheus/">Prometheus Middleware</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Services</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Auth Responses</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#aniachifast.services.auth_response">auth_response</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.ALLOWED_HEADERS_DEPENDENCY">ALLOWED_HEADERS_DEPENDENCY</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.ALLOWED_HEADERS_DEPENDENCY_JSON">ALLOWED_HEADERS_DEPENDENCY_JSON</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.limiter">limiter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.oauth2_scheme">oauth2_scheme</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.router">router</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.settings">settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.activate_user_get">activate_user_get</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.activate_user_post">activate_user_post</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard">auth_enabled_guard</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard--security-rationale">Security rationale</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard--example-router-level-protection">Example (Router-level protection) 🚀</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard--example-endpoint-level-protection">Example (Endpoint-level protection) 🔒</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard--example-disabled-state-behavior">Example (Disabled state behavior) 🚫</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#aniachifast.services.auth_response.auth_enabled_guard--notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.get_me">get_me</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.login_user">login_user</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.register_user">register_user</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.request_password_reset_get">request_password_reset_get</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.request_password_reset_post">request_password_reset_post</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.resend_activation_code_get">resend_activation_code_get</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.resend_activation_code_post">resend_activation_code_post</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.slash">slash</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.validate_token">validate_token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#aniachifast.services.auth_response.verify_token">verify_token</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../admin_users_response/">Admin Users Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_responses/">Common Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core_responses/">Core Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../database_responses/">Database Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../health_responses/">Health Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ip_responses/">IP Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../process_responses/">Process Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../utils_response/">Utils Response</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ledger_responses/">Ledger Responses</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../roles_response/">Roles Response</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools & Utilities</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/dependencies/">Dependencies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/dependencies_utils/">Dependencies Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/string_utils/">String Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/time_utils/">Time Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/files_utils/">File Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/net_utils/">Network Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/os_utils/">OS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/secure_utils/">Security Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/image_utils/">Image Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/pdf_utils/">PDF Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/html_utils/">HTML Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/html_css_utils/">HTML CSS Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/md_utils/">Markdown Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/media_utils/">Media Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/mem_utils/">Memory Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/process_utils/">Process Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/geo_ip_utils/">GeoIP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/brand_utils/">Brand Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/browser_utils/">Browser Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/logging_utils/">Logging Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/print_utils/">Print Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/protocol_utils/">Protocol Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/req_ctx_utils/">Request Context Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/responses_clases/">Response Classes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/xmp_utils/">XMP Utils</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Decorators</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/decorators/cache/">Cache Decorator</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/decorators/singleton/">Singleton Decorator</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/types/request_types/">Request Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/types/response_types/">Response Types</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/types/available_formats/">Available Formats</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/dynamic_import_utilities/">Dynamic Import Utilities</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Images</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../tools/images/filters/">Filters</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/response_multi_format/">Response Multi Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/role_utils/">Role Utils</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../info/">Info</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../api/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >WebSocket</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/commons/">Commons WS</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../api/ws/health/">Health WS</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../api-reference/">API Reference</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">fastapibase</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Services</li>
+      <li class="breadcrumb-item active">Auth Responses</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="authentication-response-service">Authentication Response Service</h1>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="aniachifast.services.auth_response" class="doc doc-heading">
+            <span class="doc doc-object-name doc-module-name">aniachifast.services.auth_response</span>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+        <p>Authentication API routes.</p>
+<p>This module defines all authentication-related HTTP endpoints, including
+user registration, login, token verification, and retrieval of the
+currently authenticated user.</p>
+<p>The implementation relies on an abstract authentication interface,
+allowing seamless switching between different authentication providers
+(e.g., database-based authentication or AWS Cognito).</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.ALLOWED_HEADERS_DEPENDENCY" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ALLOWED_HEADERS_DEPENDENCY</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ALLOWED_HEADERS_DEPENDENCY</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span>
+    <span class="n">allowed_headers</span><span class="p">(</span><span class="n">COMMON_TYPES</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.ALLOWED_HEADERS_DEPENDENCY_JSON" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">ALLOWED_HEADERS_DEPENDENCY_JSON</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">ALLOWED_HEADERS_DEPENDENCY_JSON</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span>
+    <span class="n">allowed_headers</span><span class="p">(</span><span class="n">JSON_TYPES</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">AUTH_SERVICE_DEPENDENCY</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">AUTH_SERVICE_DEPENDENCY</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_auth_service</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.limiter" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">limiter</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">limiter</span> <span class="o">=</span> <span class="n">get_limiter</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.oauth2_scheme" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">oauth2_scheme</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">oauth2_scheme</span> <span class="o">=</span> <span class="n">OAuth2PasswordBearer</span><span class="p">(</span><span class="n">tokenUrl</span><span class="o">=</span><span class="s2">&quot;/auth/login&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.router" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">router</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">router</span> <span class="o">=</span> <span class="n">APIRouter</span><span class="p">(</span>
+    <span class="n">dependencies</span><span class="o">=</span><span class="p">[</span><span class="n">Depends</span><span class="p">(</span><span class="n">auth_enabled_guard</span><span class="p">)]</span>
+<span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="aniachifast.services.auth_response.settings" class="doc doc-heading">
+            <span class="doc doc-object-name doc-attribute-name">settings</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="n">settings</span> <span class="o">=</span> <span class="n">get_settings</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.activate_user_get" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">activate_user_get</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">activate_user_get</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">activation_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Activate a user account using an activation code provided as a
+path parameter.</p>
+<p>This endpoint is primarily intended to be used from activation
+links sent via email, allowing users to activate their account
+by visiting a URL.</p>
+<p>The activation code is expected to be:
+- Single-use
+- Time-limited
+- Safe to be exposed in the URL path</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>activation_code</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Unique activation code assigned to the user.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result of the activation process wrapped in APIResponseV2.
+  Contains 'success' (bool) and 'message' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Activation via browser or email link::</p>
+<pre><code>GET /auth/activate/ABC123
+</code></pre>
+<p>cURL example::</p>
+<pre><code>curl {{host}}/auth/activate/ABC123
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.activate_user_post" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">activate_user_post</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">activate_user_post</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">activation_code</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Activate a user account using an activation code provided as a
+path parameter.</p>
+<p>This endpoint is intended for programmatic or backend-to-backend
+activation flows where an explicit HTTP POST is preferred.</p>
+<p>The activation code is extracted directly from the URL path,
+avoiding the need for request bodies or query parameters.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>activation_code</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Unique activation code assigned to the user.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result of the activation process wrapped in APIResponseV2.
+  Contains 'success' (bool) and 'message' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>cURL example::</p>
+<pre><code>curl -X POST //{{host}}/auth/activate/ABC123
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.auth_enabled_guard" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">auth_enabled_guard</span>
+
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">auth_enabled_guard</span><span class="p">()</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Authentication endpoints guard.</p>
+<p>FastAPI dependency that prevents access to authentication endpoints
+when the Auth feature is disabled.</p>
+<p>This guard acts as a <strong>feature-flag gate</strong> for the entire authentication
+section of the API. When <code>ENABLE_JWT_AUTH_ENDPOINT</code> is set to <code>False</code>,
+any endpoint protected by this dependency will immediately return
+an HTTP 403 (Forbidden), without executing:
+- Endpoint logic
+- Authentication services
+- Database connections
+- External providers (e.g. Cognito)</p>
+<p>This dependency is designed to be used:
+- At the router level (recommended)
+- Or at the individual endpoint level if needed</p>
+<h5 id="aniachifast.services.auth_response.auth_enabled_guard--security-rationale">Security rationale</h5>
+<p>This guard provides a <strong>second layer of defense</strong> ("double check")
+in addition to conditionally registering the router.</p>
+<p>Even if:
+- A router is accidentally included
+- A test loads the router manually
+- A future refactor forgets to apply the feature flag</p>
+<p>The request will still be blocked before any sensitive logic runs.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <ul>
+<li>403 Forbidden if authentication endpoints are disabled.</li>
+</ul>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>        <h5 id="aniachifast.services.auth_response.auth_enabled_guard--example-router-level-protection">Example (Router-level protection) 🚀</h5>
+<pre><code class="language-python">from fastapi import APIRouter, Depends
+from aniachifast.auth.guards import auth_enabled_guard
+
+router = APIRouter(
+    prefix=&quot;/auth&quot;,
+    tags=[&quot;Auth&quot;],
+    dependencies=[Depends(auth_enabled_guard)]
+)
+</code></pre>
+<p>All routes in this router will be disabled automatically when
+<code>ENABLE_JWT_AUTH_ENDPOINT = False</code>.</p>
+<h5 id="aniachifast.services.auth_response.auth_enabled_guard--example-endpoint-level-protection">Example (Endpoint-level protection) 🔒</h5>
+<pre><code class="language-python">@router.post(&quot;/login&quot;, dependencies=[Depends(auth_enabled_guard)])
+async def login_user(...):
+    ...
+</code></pre>
+<h5 id="aniachifast.services.auth_response.auth_enabled_guard--example-disabled-state-behavior">Example (Disabled state behavior) 🚫</h5>
+<p>If <code>ENABLE_JWT_AUTH_ENDPOINT = False</code>:</p>
+
+
+<details class="request" open>
+  <summary>Request</summary>
+  <p>POST /auth/login</p>
+</details>
+
+<details class="response" open>
+  <summary>Response</summary>
+  <p>HTTP/1.1 403 Forbidden</p>
+</details>
+
+<details class="body" open>
+  <summary>Body</summary>
+  <p>{
+    "detail": "Forbidden"
+}</p>
+</details>        <h5 id="aniachifast.services.auth_response.auth_enabled_guard--notes">Notes</h5>
+<ul>
+<li>HTTP 403 is intentionally used to explicitly deny access
+  while keeping routing intact.</li>
+<li>This dependency does <strong>not</strong> return any value.</li>
+<li>Logging can be added here for audit or security monitoring.</li>
+</ul>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.get_me" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">get_me</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_me</span><span class="p">(</span>
+    <span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">oauth2_scheme</span><span class="p">),</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Retrieve the currently authenticated user.</p>
+<p>The JWT token is extracted from the Authorization header and validated
+using the active authentication provider.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>token</code></b>
+                  (<code><span title="str">str</span></code>, default:
+                      <code><span title="fastapi.Depends">Depends</span>(<a class="autorefs autorefs-internal" title="oauth2_scheme
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.oauth2_scheme)" href="#aniachifast.services.auth_response.oauth2_scheme">oauth2_scheme</a>)</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Bearer token extracted via OAuth2 scheme.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>UserResponse</code></b>(                  <code><a class="autorefs autorefs-internal" title="UserResponse (aniachifast.core.models.auth.UserResponse)" href="../../core/models/auth/#aniachifast.core.models.auth.UserResponse">UserResponse</a></code>
+)              –
+              <div class="doc-md-description">
+                <p>Authenticated user information.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Raises:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+                  <code><span title="fastapi.HTTPException">HTTPException</span></code>
+              –
+              <div class="doc-md-description">
+                <p>401 Unauthorized if token is invalid.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.login_user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">login_user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">login_user</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">form_data</span><span class="p">:</span> <span class="n">OAuth2PasswordRequestForm</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(),</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JSONResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Authenticate user credentials and issue an access token.</p>
+<p>Credentials are provided using the OAuth2 password flow and validated
+by the configured authentication provider.</p>
+<p>The endpoint handles various login failure scenarios:
+- Invalid credentials with remaining attempts
+- Account lockout due to too many failed attempts
+- Disabled or inactive accounts
+- Token limit exceeded</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>form_data</code></b>
+                  (<code><span title="fastapi.security.OAuth2PasswordRequestForm">OAuth2PasswordRequestForm</span></code>, default:
+                      <code><span title="fastapi.Depends">Depends</span>()</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>OAuth2 username/password data.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>JSONResponse</code></b>(                  <code><span title="fastapi.responses.JSONResponse">JSONResponse</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>JWT access token on success or API envelope with
+error details on failure.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.register_user" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">register_user</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">register_user</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">user</span><span class="p">:</span> <span class="n">UserCreate</span><span class="p">,</span>
+    <span class="n">_</span><span class="o">=</span><span class="n">ALLOWED_HEADERS_DEPENDENCY_JSON</span><span class="p">,</span>
+    <span class="n">__</span><span class="o">=</span><span class="n">NO_PARAMS_DEPENDENCY</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UserRegisterResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Register a new user in the authentication system.</p>
+<p>The registration process is delegated to the configured authentication
+provider (e.g., database or Cognito).</p>
+<p>Validates:
+- Username pattern (must be valid email if FORCE_USERNAME_EQUALS_EMAIL=True)
+- Password strength (8-20 chars, uppercase, lowercase, number, special char)
+- User uniqueness</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>user</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="UserCreate (aniachifast.core.models.auth.UserCreate)" href="../../core/models/auth/#aniachifast.core.models.auth.UserCreate">UserCreate</a></code>)
+              –
+              <div class="doc-md-description">
+                <p>User registration payload.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>UserRegisterResponse</code></b>(                  <code><a class="autorefs autorefs-internal" title="UserRegisterResponse (aniachifast.core.models.auth.UserRegisterResponse)" href="../../core/models/auth/#aniachifast.core.models.auth.UserRegisterResponse">UserRegisterResponse</a></code>
+)              –
+              <div class="doc-md-description">
+                <p>API envelope with newly created user data
+or error details.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>cURL example::</p>
+<pre><code>curl -X POST "http://localhost:8000/auth/register"             -H "Content-Type: application/json"             -d '{
+"username": "user@example.com",
+"email": "user@example.com",
+"password": "&lt;ypupass&gt;"
+}' | jq
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.request_password_reset_get" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">request_password_reset_get</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">request_password_reset_get</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Request a password reset code for a user via GET.</p>
+<p>This endpoint is intended for browser-based access where the email
+is provided as a URL path parameter.</p>
+<p>The endpoint will:
+- Validate that the user exists
+- Check if the account is disabled or blocked
+- Generate a new reset code with expiration
+- Return the result wrapped in APIResponseV2</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Email address of the user requesting password reset.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result wrapped in APIResponseV2 envelope.
+  Contains 'status' (str), 'message' (str),
+  and optionally 'reset_code' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Browser example::</p>
+<pre><code>http://{{host}}/auth/reset-password/user@example.com
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.request_password_reset_post" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">request_password_reset_post</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">request_password_reset_post</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Request a password reset code for a user via POST.</p>
+<p>This endpoint is intended for programmatic or API-based access.
+It takes the email address as a path parameter and processes
+the password reset request.</p>
+<p>The endpoint will:
+- Validate that the user exists
+- Check if the account is disabled or blocked
+- Generate a new reset code with expiration
+- Return the result wrapped in APIResponseV2</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Email address of the user requesting password reset.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result wrapped in APIResponseV2 envelope.
+  Contains 'status' (str), 'message' (str),
+  and optionally 'reset_code' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>cURL example::</p>
+<pre><code>curl -X POST {{host}}/auth/reset-password/user@example.com
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.resend_activation_code_get" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">resend_activation_code_get</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">resend_activation_code_get</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Resend or regenerate activation code for a user via GET.</p>
+<p>This endpoint is designed to be accessed via URL, typically from
+email links or browser navigation. It takes the email address as
+a path parameter.</p>
+<p>The endpoint will:
+- Validate that the user exists
+- Check if the account is already activated
+- Check if the account is disabled
+- Generate a new activation code with extended expiration
+- Return the result wrapped in APIResponseV2</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Email address of the user requesting reactivation.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result wrapped in APIResponseV2 envelope.
+  Contains 'status' (str) and 'message' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>Browser or email link::</p>
+<pre><code>GET /auth/resend-activation/user@example.com
+</code></pre>
+<p>cURL example::</p>
+<pre><code>curl {{host}}/auth/resend-activation/user@example.com
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.resend_activation_code_post" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">resend_activation_code_post</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">resend_activation_code_post</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Resend or regenerate activation code for a user via POST.</p>
+<p>This endpoint is intended for programmatic or API-based access.
+It takes the email address as a path parameter and processes
+the reactivation request.</p>
+<p>The endpoint will:
+- Validate that the user exists
+- Check if the account is already activated
+- Check if the account is disabled
+- Generate a new activation code with extended expiration
+- Return the result wrapped in APIResponseV2</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>email</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Email address of the user requesting reactivation.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Result wrapped in APIResponseV2 envelope.
+  Contains 'status' (str) and 'message' (str) fields.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>cURL example::</p>
+<pre><code>curl -X POST {{host}}/auth/resend-activation/user@example.com
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.slash" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">slash</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">slash</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">_</span><span class="o">=</span><span class="n">ALLOWED_HEADERS_DEPENDENCY</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JSONResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Authentication service health check endpoint.</p>
+<p>This endpoint provides a minimal status response indicating whether
+the authentication service is enabled and which provider is active.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>JSONResponse</code></b>(                  <code><span title="fastapi.responses.JSONResponse">JSONResponse</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Service status and authentication provider metadata.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.validate_token" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">validate_token</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">validate_token</span><span class="p">(</span>
+    <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span>
+    <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span>
+        <span class="n">get_auth_service_stateless</span>
+    <span class="p">),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">JSONResponse</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Validate JWT token and return all decoded information.</p>
+<p>This endpoint validates the JWT token and returns structured user information.
+The token is provided as a URL path parameter, making it easy to use
+as a debugging/validation tool by simply pasting the token in the URL.</p>
+<p><strong>IMPORTANT: This endpoint is STATELESS - it does NOT connect to the database.</strong>
+All information comes from the JWT token itself.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>request</code></b>
+                  (<code><span title="fastapi.Request">Request</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>Incoming HTTP request object.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>token</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>JWT token as URL path parameter.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><span title="fastapi.Depends">Depends</span>(<a class="autorefs autorefs-internal" title="get_auth_service_stateless (aniachifast.auth.auth_dependency.get_auth_service_stateless)" href="../../auth/auth_dependency/#aniachifast.auth.auth_dependency.get_auth_service_stateless">get_auth_service_stateless</a>)</code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service (stateless).</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>JSONResponse</code></b>(                  <code><span title="fastapi.responses.JSONResponse">JSONResponse</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Complete token information including user data.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<details class="example" open>
+  <summary>Example</summary>
+  <p>cURL example::</p>
+<pre><code>curl -X GET "http://localhost:8000/auth/validate/token/YOUR_TOKEN_HERE"
+</code></pre>
+<p>Browser example::</p>
+<pre><code>http://localhost:8000/auth/validate/token/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre>
+</details>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="aniachifast.services.auth_response.verify_token" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">verify_token</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-async"><code>async</code></small>
+  </span>
+
+</h3>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">verify_token</span><span class="p">(</span>
+    <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">auth_service</span><span class="p">:</span> <span class="n">AuthInterface</span> <span class="o">=</span> <span class="n">AUTH_SERVICE_DEPENDENCY</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Verify the validity of a JWT access token.</p>
+<p>This endpoint checks whether the provided token is valid and
+recognized by the authentication provider.</p>
+
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Parameters:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+              <b><code>token</code></b>
+                  (<code><span title="str">str</span></code>)
+              –
+              <div class="doc-md-description">
+                <p>JWT access token.</p>
+              </div>
+            </li>
+            <li>
+              <b><code>auth_service</code></b>
+                  (<code><a class="autorefs autorefs-internal" title="AuthInterface (aniachifast.auth.auth_interface.AuthInterface)" href="../../api-reference/#aniachifast.auth.auth_interface.AuthInterface">AuthInterface</a></code>, default:
+                      <code><a class="autorefs autorefs-internal" title="AUTH_SERVICE_DEPENDENCY
+
+
+  
+      module-attribute
+   (aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY)" href="#aniachifast.services.auth_response.AUTH_SERVICE_DEPENDENCY">AUTH_SERVICE_DEPENDENCY</a></code>
+)
+              –
+              <div class="doc-md-description">
+                <p>Resolved authentication service.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="field-list">
+  <colgroup>
+    <col class="field-name" />
+    <col class="field-body" />
+  </colgroup>
+  <tbody valign="top">
+    <tr class="field">
+      <th class="field-name">Returns:</th>
+      <td class="field-body">
+        <ul class="first simple">
+            <li>
+<b><code>dict</code></b>(                  <code><span title="dict">dict</span></code>
+)              –
+              <div class="doc-md-description">
+                <p>Dictionary containing the token validity status.</p>
+              </div>
+            </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../admin_users_response/" class="btn btn-neutral float-right" title="Admin Users Response">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../admin_users_response/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
